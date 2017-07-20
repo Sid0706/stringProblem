@@ -1,4 +1,4 @@
-package con.javatest.iapps.qa;
+package com.javatest.iapps.qa;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -24,5 +24,11 @@ public class StringProblemTest{
 		char c = 'i';
 		String str = sb.remove(s, c);
 		Assert.assertNotEquals("iapps qa interview", str);
+	}
+	
+	@Test
+	public void testNullString() {
+		String str = sb.remove(null, 'a');
+		Assert.assertEquals(str, "");
 	}
 }
